@@ -22,26 +22,19 @@ std::string path = "/Users/rohansawhney/Desktop/developer/C++/denoising/bunny.ob
 
 Mesh mesh;
 bool success = true;
-bool meanCurvatureFlow = true;
 double h = 0.001;
 
 void setTitle()
 {
     std::stringstream title;
-    if (meanCurvatureFlow) {
-        title << "Denoising - Implicit Mean Curvature Flow, h = " << std::setprecision(6) << h;
-        glutSetWindowTitle(title.str().c_str());
-        
-    } else {
-        glutSetWindowTitle("Denoising - Manifold Harmonics");
-    }
+    title << "Denoising - Implicit Mean Curvature Flow, h = " << std::setprecision(6) << h;
+    glutSetWindowTitle(title.str().c_str());
 }
 
 void printInstructions()
 {
-    std::cerr << "p: toggle between implicit mean curvature flow and manifold harmonics\n"
-              << "' ': denoise\n"
-              << "→/←: increase/decrease eigenvectors for manifold harmonics/time step for mean curvature flow\n"
+    std::cerr << "' ': denoise\n"
+              << "→/←: increase/decrease time step for mean curvature flow\n"
               << "r: reload mesh\n"
               << "↑/↓: move in/out\n"
               << "w/s: move up/down\n"
@@ -105,15 +98,11 @@ void keyboard(unsigned char key, int x0, int y0)
     switch (key) {
         case 27 :
             exit(0);
-        case 'p':
-            meanCurvatureFlow = !meanCurvatureFlow;
-            setTitle();
-            break;
         case 'r':
             success = mesh.read(path);
             break;
         case ' ':
-            if (meanCurvatureFlow) mesh.computeMeanCurvatureFlow(h);
+            mesh.computeMeanCurvatureFlow(h);
             break;
         case 'a':
             x -= 0.03;
@@ -142,18 +131,12 @@ void special(int i, int x0, int y0)
             z -= 0.03;
             break;
         case GLUT_KEY_LEFT:
-            if (meanCurvatureFlow) {
-                h -= 0.001;
-                if (h < 0.001) h = 0.001;
-            }
-            
+            h -= 0.001;
+            if (h < 0.001) h = 0.001;
             setTitle();
             break;
         case GLUT_KEY_RIGHT:
-            if (meanCurvatureFlow) {
-                h += 0.001;
-            }
-            
+            h += 0.001;
             setTitle();
             break;
     }

@@ -71,9 +71,9 @@ void Mesh::buildFlowOperator(Eigen::SparseMatrix<double>& A, const double h) con
 void Mesh::computeMeanCurvatureFlow(const double h)
 {
     // solve (Id - hL) v(t+h) = v(t)
-    
     int v = (int)vertices.size();
     
+    // set right hand side
     Eigen::VectorXd fx(v);
     Eigen::VectorXd fy(v);
     Eigen::VectorXd fz(v);
@@ -84,6 +84,7 @@ void Mesh::computeMeanCurvatureFlow(const double h)
         fz(v->index) = 2 * v->dualArea() * v->position.z() / h;
     }
     
+    // build flow operator
     Eigen::SparseMatrix<double> A;
     buildFlowOperator(A, h);
     
@@ -94,6 +95,7 @@ void Mesh::computeMeanCurvatureFlow(const double h)
     fy = solver.solve(fy);
     fz = solver.solve(fz);
     
+    // update vertex positions
     for (VertexIter v = vertices.begin(); v != vertices.end(); v++) {
         v->position.x() = fx(v->index);
         v->position.y() = fy(v->index);

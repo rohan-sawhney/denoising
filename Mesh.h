@@ -24,7 +24,7 @@ public:
     
     // computes implicit mean curvature flow 
     void computeMeanCurvatureFlow(const double h);
-    
+        
     // member variables
     std::vector<HalfEdge> halfEdges;
     std::vector<Vertex> vertices;
@@ -34,7 +34,7 @@ public:
     std::vector<Face> faces;
     std::vector<HalfEdgeIter> boundaries;
 
-private:    
+private:
     // Id - hL
     void buildFlowOperator(Eigen::SparseMatrix<double>& A, const double h) const;
     
