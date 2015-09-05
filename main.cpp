@@ -84,7 +84,7 @@ void display()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
-    gluLookAt(0, 0, z, x, y, 0, 0, 1, 0);
+    gluLookAt(0, 1, z, x, y, 0, 0, 1, 0);
     
     if (success) {
         drawFaces();
