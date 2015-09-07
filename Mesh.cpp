@@ -1,6 +1,6 @@
 #include "Mesh.h"
 #include "MeshIO.h"
-#include <Eigen/SparseLU>
+#include <Eigen/SparseCholesky>
 
 Mesh::Mesh()
 {
@@ -45,7 +45,7 @@ bool Mesh::write(const std::string& fileName) const
 
 void Mesh::buildFlowOperator(Eigen::SparseMatrix<double>& A, const double h) const
 {
-    A.resize((int)vertices.size(), (int)vertices.size());
+    std::vector<Eigen::Triplet<double>> ATriplet;
     
     for (VertexCIter v = vertices.begin(); v != vertices.end(); v++) {
         
@@ -56,16 +56,16 @@ void Mesh::buildFlowOperator(Eigen::SparseMatrix<double>& A, const double h) con
         do {
             double coefficient = -(he->cotan() + he->flip->cotan());
             
-            A.insert(v->index, he->flip->vertex->index) = coefficient;
+            ATriplet.push_back(Eigen::Triplet<double>(v->index, he->flip->vertex->index, coefficient));
             sumCoefficients += coefficient;
             
             he = he->flip->next;
         } while (he != v->he);
         
-        A.insert(v->index, v->index) = 2 * dualArea / h - sumCoefficients;
+        ATriplet.push_back(Eigen::Triplet<double>(v->index, v->index, 2*dualArea/h - sumCoefficients));
     }
     
-    A.makeCompressed();
+    A.setFromTriplets(ATriplet.begin(), ATriplet.end());
 }
 
 void Mesh::computeMeanCurvatureFlow(const double h)
@@ -85,11 +85,10 @@ void Mesh::computeMeanCurvatureFlow(const double h)
     }
     
     // build flow operator
-    Eigen::SparseMatrix<double> A;
+    Eigen::SparseMatrix<double> A(v, v);
     buildFlowOperator(A, h);
     
-    Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
-    solver.compute(A);
+    Eigen::SimplicialCholesky<Eigen::SparseMatrix<double>> solver(A);
     
     fx = solver.solve(fx);
     fy = solver.solve(fy);

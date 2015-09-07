@@ -10,7 +10,7 @@ bool Vertex::isIsolated() const
 }
 
 double Vertex::dualArea() const
-{
+{    
     double area = 0.0;
     
     HalfEdgeCIter h = he;

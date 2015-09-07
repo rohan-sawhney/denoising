@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		3225C55E1B9B42D100E1056F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3225C55D1B9B42D100E1056F /* OpenGL.framework */; };
 		3225C5601B9B42D700E1056F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3225C55F1B9B42D700E1056F /* GLUT.framework */; };
-		3225C56F1B9B438C00E1056F /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3225C5611B9B438C00E1056F /* Edge.cpp */; };
-		3225C5701B9B438C00E1056F /* Face.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3225C5631B9B438C00E1056F /* Face.cpp */; };
-		3225C5711B9B438C00E1056F /* HalfEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3225C5651B9B438C00E1056F /* HalfEdge.cpp */; };
-		3225C5721B9B438C00E1056F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3225C5671B9B438C00E1056F /* main.cpp */; };
-		3225C5731B9B438C00E1056F /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3225C5681B9B438C00E1056F /* Mesh.cpp */; };
-		3225C5741B9B438C00E1056F /* MeshIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3225C56A1B9B438C00E1056F /* MeshIO.cpp */; };
-		3225C5751B9B438C00E1056F /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3225C56D1B9B438C00E1056F /* Vertex.cpp */; };
+		323531191B9CAE780091AC09 /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3235310B1B9CAE780091AC09 /* Edge.cpp */; };
+		3235311A1B9CAE780091AC09 /* Face.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3235310D1B9CAE780091AC09 /* Face.cpp */; };
+		3235311B1B9CAE780091AC09 /* HalfEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3235310F1B9CAE780091AC09 /* HalfEdge.cpp */; };
+		3235311C1B9CAE780091AC09 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323531111B9CAE780091AC09 /* main.cpp */; };
+		3235311D1B9CAE780091AC09 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323531121B9CAE780091AC09 /* Mesh.cpp */; };
+		3235311E1B9CAE780091AC09 /* MeshIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323531141B9CAE780091AC09 /* MeshIO.cpp */; };
+		3235311F1B9CAE780091AC09 /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323531171B9CAE780091AC09 /* Vertex.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,20 +34,20 @@
 		3225C5531B9B42C600E1056F /* denoising */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = denoising; sourceTree = BUILT_PRODUCTS_DIR; };
 		3225C55D1B9B42D100E1056F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		3225C55F1B9B42D700E1056F /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-		3225C5611B9B438C00E1056F /* Edge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Edge.cpp; path = ../Edge.cpp; sourceTree = "<group>"; };
-		3225C5621B9B438C00E1056F /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Edge.h; path = ../Edge.h; sourceTree = "<group>"; };
-		3225C5631B9B438C00E1056F /* Face.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Face.cpp; path = ../Face.cpp; sourceTree = "<group>"; };
-		3225C5641B9B438C00E1056F /* Face.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Face.h; path = ../Face.h; sourceTree = "<group>"; };
-		3225C5651B9B438C00E1056F /* HalfEdge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HalfEdge.cpp; path = ../HalfEdge.cpp; sourceTree = "<group>"; };
-		3225C5661B9B438C00E1056F /* HalfEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HalfEdge.h; path = ../HalfEdge.h; sourceTree = "<group>"; };
-		3225C5671B9B438C00E1056F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = "<group>"; };
-		3225C5681B9B438C00E1056F /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = ../Mesh.cpp; sourceTree = "<group>"; };
-		3225C5691B9B438C00E1056F /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = ../Mesh.h; sourceTree = "<group>"; };
-		3225C56A1B9B438C00E1056F /* MeshIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeshIO.cpp; path = ../MeshIO.cpp; sourceTree = "<group>"; };
-		3225C56B1B9B438C00E1056F /* MeshIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeshIO.h; path = ../MeshIO.h; sourceTree = "<group>"; };
-		3225C56C1B9B438C00E1056F /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Types.h; path = ../Types.h; sourceTree = "<group>"; };
-		3225C56D1B9B438C00E1056F /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vertex.cpp; path = ../Vertex.cpp; sourceTree = "<group>"; };
-		3225C56E1B9B438C00E1056F /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vertex.h; path = ../Vertex.h; sourceTree = "<group>"; };
+		3235310B1B9CAE780091AC09 /* Edge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Edge.cpp; sourceTree = SOURCE_ROOT; };
+		3235310C1B9CAE780091AC09 /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edge.h; sourceTree = SOURCE_ROOT; };
+		3235310D1B9CAE780091AC09 /* Face.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Face.cpp; sourceTree = SOURCE_ROOT; };
+		3235310E1B9CAE780091AC09 /* Face.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Face.h; sourceTree = SOURCE_ROOT; };
+		3235310F1B9CAE780091AC09 /* HalfEdge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HalfEdge.cpp; sourceTree = SOURCE_ROOT; };
+		323531101B9CAE780091AC09 /* HalfEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfEdge.h; sourceTree = SOURCE_ROOT; };
+		323531111B9CAE780091AC09 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		323531121B9CAE780091AC09 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = SOURCE_ROOT; };
+		323531131B9CAE780091AC09 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = SOURCE_ROOT; };
+		323531141B9CAE780091AC09 /* MeshIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshIO.cpp; sourceTree = SOURCE_ROOT; };
+		323531151B9CAE780091AC09 /* MeshIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshIO.h; sourceTree = SOURCE_ROOT; };
+		323531161B9CAE780091AC09 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = SOURCE_ROOT; };
+		323531171B9CAE780091AC09 /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = SOURCE_ROOT; };
+		323531181B9CAE780091AC09 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,20 +84,20 @@
 		3225C5551B9B42C600E1056F /* denoising */ = {
 			isa = PBXGroup;
 			children = (
-				3225C5611B9B438C00E1056F /* Edge.cpp */,
-				3225C5621B9B438C00E1056F /* Edge.h */,
-				3225C5631B9B438C00E1056F /* Face.cpp */,
-				3225C5641B9B438C00E1056F /* Face.h */,
-				3225C5651B9B438C00E1056F /* HalfEdge.cpp */,
-				3225C5661B9B438C00E1056F /* HalfEdge.h */,
-				3225C5671B9B438C00E1056F /* main.cpp */,
-				3225C5681B9B438C00E1056F /* Mesh.cpp */,
-				3225C5691B9B438C00E1056F /* Mesh.h */,
-				3225C56A1B9B438C00E1056F /* MeshIO.cpp */,
-				3225C56B1B9B438C00E1056F /* MeshIO.h */,
-				3225C56C1B9B438C00E1056F /* Types.h */,
-				3225C56D1B9B438C00E1056F /* Vertex.cpp */,
-				3225C56E1B9B438C00E1056F /* Vertex.h */,
+				3235310B1B9CAE780091AC09 /* Edge.cpp */,
+				3235310C1B9CAE780091AC09 /* Edge.h */,
+				3235310D1B9CAE780091AC09 /* Face.cpp */,
+				3235310E1B9CAE780091AC09 /* Face.h */,
+				3235310F1B9CAE780091AC09 /* HalfEdge.cpp */,
+				323531101B9CAE780091AC09 /* HalfEdge.h */,
+				323531111B9CAE780091AC09 /* main.cpp */,
+				323531121B9CAE780091AC09 /* Mesh.cpp */,
+				323531131B9CAE780091AC09 /* Mesh.h */,
+				323531141B9CAE780091AC09 /* MeshIO.cpp */,
+				323531151B9CAE780091AC09 /* MeshIO.h */,
+				323531161B9CAE780091AC09 /* Types.h */,
+				323531171B9CAE780091AC09 /* Vertex.cpp */,
+				323531181B9CAE780091AC09 /* Vertex.h */,
 			);
 			path = denoising;
 			sourceTree = "<group>";
@@ -158,13 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3225C5751B9B438C00E1056F /* Vertex.cpp in Sources */,
-				3225C5711B9B438C00E1056F /* HalfEdge.cpp in Sources */,
-				3225C5701B9B438C00E1056F /* Face.cpp in Sources */,
-				3225C5721B9B438C00E1056F /* main.cpp in Sources */,
-				3225C56F1B9B438C00E1056F /* Edge.cpp in Sources */,
-				3225C5741B9B438C00E1056F /* MeshIO.cpp in Sources */,
-				3225C5731B9B438C00E1056F /* Mesh.cpp in Sources */,
+				3235311F1B9CAE780091AC09 /* Vertex.cpp in Sources */,
+				3235311B1B9CAE780091AC09 /* HalfEdge.cpp in Sources */,
+				3235311A1B9CAE780091AC09 /* Face.cpp in Sources */,
+				3235311C1B9CAE780091AC09 /* main.cpp in Sources */,
+				323531191B9CAE780091AC09 /* Edge.cpp in Sources */,
+				3235311E1B9CAE780091AC09 /* MeshIO.cpp in Sources */,
+				3235311D1B9CAE780091AC09 /* Mesh.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +291,7 @@
 				3225C55C1B9B42C600E1056F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
